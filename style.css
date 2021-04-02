@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --clr-dark-blue: hsl(238, 29%, 16%);
+    --clr-soft-red: hsl(14, 88%, 65%);
+    --clr-soft-violet: hsl(273, 75%, 66%);
+    --clr-soft-blue: hsl(240, 73%, 65%);
+    --clr-light-blue: hsl(240, 5%, 91%);
+    /* TEXT COLOR */
+    --text-primary-clr: hsl(237, 12%, 33%);
+    --text-secondary-clr: hsl(240, 6%, 50%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* 
+img {
+    max-width: 100%;
+} */
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, var(--clr-soft-violet), var(--clr-soft-blue));
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-section {
+    width: 920px;
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    grid-template-rows: 510px;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 1px 20px 15px rgba(0, 0, 0, 0.2);
+}
+
+.img-wrapper {
+    position: relative;
+}
+
+.bg-pattern {
+    position: absolute;
+
+    width: 240% !important;
+    bottom: 0;
+    object-position: -480px 100px;
+}
+
+.illustration {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 130%;
+    transform: translateY(-50%);
+    object-position: -80px 0;
+}
+
+.box {
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    width: 150px;
+    top: 50%;
+    transform: translateX(-49%);
+}
+
+.faq-wrapper {
+    padding: 70px 85px;
+    font-size: 14px;
+    z-index: 20;
+}
+
+.faq-wrapper h1 {
+    margin-bottom: 30px;
+}
+
+.faq-wrapper > div {
+    padding: 17px 0;
+    border-bottom: 1px solid var(--clr-light-blue);
+    color: var(--text-secondary-clr);
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.question:hover {
+    color: var(--clr-soft-red);
+}
+
+.question:hover .arrow-down {
+    transform: rotate(180deg) !important;
+}
+
+.arrow-down {
+    transition: 0.3s ease;
+}
+
+.faq.active .question {
+    font-weight: bold;
+    color: black;
+}
+
+.faq.active .answer {
+    display: inline-block;
+}
+
+.answer {
+    display: none;
+    color: var(--text-secondary-clr);
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 968px) {
+}
